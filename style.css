@@ -1,0 +1,263 @@
+h1, span.info {
+	text-align: center; 
+    font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	display: block;
+	width: 400px;
+	margin: 0 auto;
+}
+
+span.info { font-style: italic; }
+
+/* 	---------------------------
+	Whiteboard setup
+	--------------------------- */
+#whiteboard_wrapper {
+	margin: 0 auto;
+	padding: 30px;
+	width: 600px;
+	height: 600px;
+	border: 2px solid #333;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #fff; }
+
+#whiteboard {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: block;
+	border: 2px solid #333;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #eee; }
+
+/* 	---------------------------
+	Add Postit button
+	--------------------------- */
+#add_postit {
+	position: absolute;
+	top: 0px;
+	left: 15px;
+	z-index: 999;
+	width: 50px;
+    height: 40px;
+    background: #ccc;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+    transition: 0.3s ease-in-out; }
+
+#add_postit:hover { 
+	background: #666; 
+	border-style: inset; 
+	border-top: none; }
+
+#add_postit:hover i { 
+	color: #fff; }
+
+#add_postit i { 
+	font-size: 1.5em; 
+	color: #666; 
+	transition: 0.3s ease-in-out; }
+
+.postit {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99; 
+	cursor: pointer;}
+
+#postit_startout {
+	position: absolute;
+	bottom: 0;
+	right: 0; }
+
+.has_shadow {
+	-webkit-box-shadow: 0 0 10px;
+	-moz-box-shadow: 0 0 10px;
+	-ms-box-shadow: 0 0 10px;
+	-o-box-shadow: 0 0 10px;
+	box-shadow: 0 0 10px; }
+
+.draggable {
+	width: 200px;
+	height: 200px;
+	padding: 10px;
+	position: relative; }
+
+textarea {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+    border: none;
+    overflow: auto;
+    outline: none;
+    background:none;
+    color: #000;
+    font-size: 1.05em; 
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Roboto', sans-serif; }
+
+
+/* 	---------------------------
+	Default placeholder color setting
+	--------------------------- */
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #000; }
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #000;
+   opacity:  1; }
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #000;
+   opacity:  1; }
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #000; }
+
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #000; }
+
+/* 	---------------------------
+	Postit options menu
+	--------------------------- */
+.postit_options {
+	position: absolute;
+	display: none;
+	top: 0;
+	right: -30px;
+	z-index: 50;
+	-webkit-box-shadow: 0 0 10px; 
+	-moz-box-shadow: 0 0 10px;
+	-ms-box-shadow: 0 0 10px;
+	-o-box-shadow: 0 0 10px;
+	cursor: pointer; }
+
+.postit_options button {
+	width: 30px;
+	height: 40px;
+	border: none;
+	outline: none; }
+
+.postit_options i { 
+	font-size: 1.3em; 
+	color: #666; 
+	cursor: pointer;}
+
+.postit_options button:hover i { 
+	color: #999; }
+
+.color, .delete {
+	display: block; }
+
+
+
+@media screen and (min-width: 576px) {
+	
+	span.info { width: 100%; }
+
+	.postit_options {
+		display: block;
+	}
+
+	.postit_options { right: -60px; }
+	.postit_options button {
+	width: 60px;
+	height: 80px;
+	}
+
+	#whiteboard_wrapper {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 600px;
+		border: none;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-ms-border-radius: 5px;
+		-o-border-radius: 5px;
+		border-radius: 5px;
+		background-color: #fff; }
+
+	#whiteboard {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		display: block;
+		border: 2px solid #333;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-ms-border-radius: 5px;
+		-o-border-radius: 5px;
+		border-radius: 5px;
+		background-color: #eee; }
+}
+
+
+@media screen and (min-width: 992px) {
+	
+	#whiteboard_wrapper {
+		height: 500px;
+	}
+
+}
+
+@media screen and (min-width: 1200px) {
+
+	span.info { width: 400px; }
+	
+	.postit_options {
+		display: none;
+	}
+
+	.postit_options { right: -30px; }
+	.postit_options button {
+	width: 30px;
+	height: 40px;
+	}
+
+	#whiteboard_wrapper {
+		margin: 30px auto;
+		padding: 30px;
+		width: 900px;
+		height: 600px;
+		border: 2px solid #333;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-ms-border-radius: 5px;
+		-o-border-radius: 5px;
+		border-radius: 5px;
+		background-color: #fff; }
+
+	#whiteboard {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		display: block;
+		border: 2px solid #333;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-ms-border-radius: 5px;
+		-o-border-radius: 5px;
+		border-radius: 5px;
+		background-color: #eee; }
+}

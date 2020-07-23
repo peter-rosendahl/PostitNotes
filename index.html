@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery Postit Test</title>
+  <meta name="description" content="Programmeret af Peter Rosendahl, 22. juni 2017">
+  <!-- styles -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- scripts -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="jquery.ui.touch-punch.min.js"></script>
+  <script src="postit.js"></script>
+</head>
+<body>
+ 
+  <h1>Whiteboard example</h1>
+  <span class="info">(info: this module temporarly works smoothly on desktop, but only limited touch events avaliable on mobile devices)</span>
+  <div id="whiteboard_wrapper">
+    <div id="whiteboard">
+      <button id="add_postit"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+      
+      <!-- Above this postit_startout div are new postits being placed-->
+      <div id="postit_startout"></div>
+    </div> <!-- end/#whiteboard -->
+   </div>
+  
+</body>
+</html>
